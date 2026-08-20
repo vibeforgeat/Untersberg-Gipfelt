@@ -1,0 +1,3 @@
+import { Feather } from '@expo/vector-icons';
+import { Text, View } from 'react-native';
+export function StatCard({ icon, value, label, accent = 'forest' }: { icon: any; value: string; label: string; accent?: 'forest' | 'gold' }) { return <View className="flex-1 rounded-2xl border border-line bg-card p-4"><View className={`mb-5 h-8 w-8 items-center justify-center rounded-full ${accent === 'gold' ? 'bg-gold/20' : 'bg-forest/10'}`}><Feather name={icon} size={15} color={accent === 'gold' ? '#B46A34' : '#1E382B'} /></View><Text className="text-2xl font-bold text-ink">{value}</Text><Text className="mt-1 text-xs font-semibold text-moss">{label}</Text></View>; }

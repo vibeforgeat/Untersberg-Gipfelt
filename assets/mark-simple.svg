@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="256" height="256" role="img" aria-label="Untersberg Gipfelt Signet">
+<path d="M 182.0 555.0 C 209.0 527.2 312.5 403.8 362.0 370.0 C 411.5 336.2 480.8 325.2 512.0 330.0 C 543.2 334.8 550.8 398.1 570.0 402.0 C 589.2 405.9 599.2 333.1 640.0 356.0 C 680.8 378.9 811.7 525.1 842.0 555.0" fill="none" stroke="#1E382B" stroke-width="58" opacity="1.00" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 149.0 705.0 C 178.7 677.2 292.6 553.8 347.0 520.0 C 401.4 486.2 477.7 475.2 512.0 480.0 C 546.3 484.8 554.7 548.1 575.8 552.0 C 596.9 555.9 607.9 483.1 652.8 506.0 C 697.7 529.0 841.7 675.1 875.0 705.0" fill="none" stroke="#1E382B" stroke-width="64" opacity="0.55" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="512" cy="330" r="96" fill="#D9A036"/>
+</svg>

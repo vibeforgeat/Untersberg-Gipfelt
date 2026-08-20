@@ -1,0 +1,7 @@
+services:
+  untersberg-gipfelt:
+    build: .
+    container_name: untersberg-gipfelt
+    ports:
+      - "8080:80"
+    restart: unless-stopped

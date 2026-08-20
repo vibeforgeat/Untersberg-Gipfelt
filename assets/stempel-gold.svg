@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" width="420" height="420" role="img" aria-label="Gipfelstempel Berchtesgadener Hochthron">
+<defs>
+<filter id="ink8123" x="-20%" y="-20%" width="140%" height="140%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="23" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/></filter>
+<path id="arcTop8123" fill="none" d="M 42.0 210.0 A 168.0 168.0 0 0 1 378.0 210.0"/>
+<path id="arcBot8123" fill="none" d="M 52.0 210.0 A 158.0 158.0 0 0 0 368.0 210.0"/>
+</defs>
+<g transform="rotate(2.74 210 210) translate(3.7 3.6)" opacity="0.93" filter="url(#ink8123)">
+<circle cx="210" cy="210" r="196" fill="none" stroke="#8F631F" stroke-width="9"/>
+<circle cx="210" cy="210" r="176" fill="none" stroke="#8F631F" stroke-width="3.5"/>
+<path d="M 111.0 259.5 C 119.1 251.2 150.2 214.1 165.0 204.0 C 179.8 193.9 200.6 190.6 210.0 192.0 C 219.4 193.4 221.6 212.4 227.4 213.6 C 233.2 214.8 236.2 192.9 248.4 199.8 C 260.6 206.7 299.9 250.5 309.0 259.5" fill="none" stroke="#8F631F" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 78.0 302.0 C 88.8 290.9 130.2 241.5 150.0 228.0 C 169.8 214.5 197.5 210.1 210.0 212.0 C 222.5 213.9 225.5 239.2 233.2 240.8 C 240.9 242.4 244.9 213.2 261.2 222.4 C 277.5 231.6 329.9 290.1 342.0 302.0" fill="none" stroke="#8F631F" stroke-width="5" opacity="0.55" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="210" cy="192" r="11" fill="#8F631F"/>
+<text font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="16.2" letter-spacing="1.2" fill="#8F631F"><textPath href="#arcTop8123" startOffset="50%" text-anchor="middle">BERCHTESGADENER HOCHTHRON</textPath></text>
+<text font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="21" letter-spacing="2.2" fill="#8F631F"><textPath href="#arcBot8123" startOffset="50%" text-anchor="middle">1972 M · 12.07.2026</textPath></text>
+<path d="M 369.0 201.0 l 4 8 l 8 1 l -6 6 l 2 8 l -8 -4 l -8 4 l 2 -8 l -6 -6 l 8 -1 z" fill="#8F631F"/>
+<path d="M 43.0 201.0 l 4 8 l 8 1 l -6 6 l 2 8 l -8 -4 l -8 4 l 2 -8 l -6 -6 l 8 -1 z" fill="#8F631F"/>
+<circle cx="210" cy="210" r="196" fill="none" stroke="#F0EAE1" stroke-width="4" opacity="0.95" stroke-dasharray="3 268 6 191 2 305 7 213" stroke-dashoffset="182"/>
+<text font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="17" letter-spacing="1.6" fill="#8F631F" text-anchor="middle" x="210" y="302">GIPFELSIEG</text>
+</g></svg>

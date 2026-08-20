@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="Konzept C Hoehenlinie">
+<rect width="1024" height="1024" rx="230" fill="#141715"/>
+<g opacity="0.20" fill="none" stroke="#7FA391" stroke-width="5">
+<ellipse cx="512" cy="500" rx="195" ry="150"/>
+<ellipse cx="512" cy="500" rx="292" ry="225"/>
+<ellipse cx="512" cy="500" rx="390" ry="300"/>
+<ellipse cx="512" cy="500" rx="487" ry="375"/>
+<ellipse cx="512" cy="500" rx="585" ry="450"/>
+</g>
+<path d="M 436 618 L 588 618 L 512 872 Z" fill="#D9A036" opacity="0.6"/>
+<path d="M 512 168 L 774 652 Q 512 592 250 652 Z" fill="#D9A036"/>
+<path d="M 380.0 491.0 C 390.8 478.8 432.2 424.5 452.0 409.6 C 471.8 394.8 499.5 389.9 512.0 392.0 C 524.5 394.1 527.5 422.0 535.2 423.7 C 542.9 425.4 546.9 393.3 563.2 403.4 C 579.5 413.5 631.9 477.9 644.0 491.0 L 644.0 596 L 380.0 596 Z" fill="#141715"/>
+</svg>

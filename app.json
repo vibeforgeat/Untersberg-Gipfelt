@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Untersberg Gipfelt",
+    "slug": "untersberg-gipfelt",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "untersberggipfelt",
+    "userInterfaceStyle": "light",
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./public/icon-b-kalkstein.png"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-asset",
+      "expo-font"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

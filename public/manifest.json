@@ -1,0 +1,23 @@
+{
+  "name": "Untersberg Gipfelt",
+  "short_name": "Gipfelt",
+  "description": "Die Untersberg Challenge: Höhenmeter sammeln, Gipfel teilen, Wirkung schaffen.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#FAF6EE",
+  "theme_color": "#1E382B",
+  "icons": [
+    {
+      "src": "./icon-b-kalkstein.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./icon-b-kalkstein.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
