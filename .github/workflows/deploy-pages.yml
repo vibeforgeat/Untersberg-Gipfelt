@@ -27,6 +27,8 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Generate NativeWind CSS
+        run: mkdir -p node_modules/.cache/nativewind && npx tailwindcss -i ./global.css -o node_modules/.cache/nativewind/global.css --config ./tailwind.config.js
       - name: Build Expo web export
         env:
           EXPO_PUBLIC_BASE_URL: /${{ github.event.repository.name }}
