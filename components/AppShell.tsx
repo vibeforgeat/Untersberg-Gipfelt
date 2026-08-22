@@ -8,6 +8,7 @@ const nav = [
   { href: '/', label: 'Übersicht', icon: 'compass' },
   { href: '/gipfelbuch', label: 'Gipfelbuch', icon: 'book-open' },
   { href: '/checkin', label: 'Check-In', icon: 'map-pin' },
+  { href: '/verbinden', label: 'Verbinden', icon: 'link' },
   { href: '/ranking', label: 'Rangliste', icon: 'award' },
   { href: '/sponsoren', label: 'Impact', icon: 'sun' }
 ] as const;
@@ -29,4 +30,7 @@ export function AppShell({ children, scroll = true }: PropsWithChildren<{ scroll
   </SafeAreaView>;
 }
 
-export function SectionTitle({ eyebrow, title, action }: { eyebrow?: string; title: string; action?: string }) { return <View className="mb-4 flex-row items-end justify-between"><View>{eyebrow && <Text className="mb-1 text-[11px] font-bold uppercase tracking-[2px] text-gold">{eyebrow}</Text>}<Text className="font-display text-2xl font-bold text-ink md:text-3xl">{title}</Text></View>{action && <Text className="text-sm font-bold text-forest">{action}</Text>}</View>; }
+export function SectionTitle({ eyebrow, title, action, actionHref }: { eyebrow?: string; title: string; action?: string; actionHref?: string }) {
+  const actionLabel = action && <Text className="text-sm font-bold text-forest">{action}</Text>;
+  return <View className="mb-4 flex-row items-end justify-between gap-3"><View className="flex-1">{eyebrow && <Text className="mb-1 text-[11px] font-bold uppercase tracking-[2px] text-gold">{eyebrow}</Text>}<Text className="font-display text-2xl font-bold text-ink md:text-3xl">{title}</Text></View>{actionLabel && (actionHref ? <Link href={actionHref as any} asChild><Pressable className="shrink-0">{actionLabel}</Pressable></Link> : <View className="shrink-0">{actionLabel}</View>)}</View>;
+}

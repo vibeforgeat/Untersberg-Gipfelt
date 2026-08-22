@@ -46,6 +46,28 @@ export const posts: SummitPost[] = [
   { id: 6, user: 'Hannes_Höhenmeter', initials: 'HH', summit: 'Salzburger Hochthron', route: 'Dopplersteig', time: 'vor 3 Tagen', elevation: 1412, duration: '04:05', vam: 345, image: 'https://images.unsplash.com/photo-1533130061792-64b345e4a833?auto=format&fit=crop&w=900&q=85', verified: 'Verifiziert via Strava', kudos: 64, comments: 8, text: 'Runde Sache: 10k Club geknackt und 14.000 Höhenmeter gesammelt.' }
 ];
 
+export type ProviderId = 'strava' | 'garmin' | 'apple-health' | 'google-health' | 'suunto';
+export type FitnessProvider = { id: ProviderId; name: string; short: string; color: string; description: string };
+export type ImportableActivity = { id: number; provider: ProviderId; title: string; date: string; elevation: number; distance: string; duration: string };
+
+export const fitnessProviders: FitnessProvider[] = [
+  { id: 'strava', name: 'Strava', short: 'ST', color: '#FC4C02', description: 'Aktivitäten & Segmente synchronisieren' },
+  { id: 'garmin', name: 'Garmin Connect', short: 'GC', color: '#007CC3', description: 'Touren von Garmin-Geräten importieren' },
+  { id: 'apple-health', name: 'Apple Health', short: 'AH', color: '#FF2D55', description: 'Workouts aus der Health-App übernehmen' },
+  { id: 'google-health', name: 'Google Health Connect', short: 'GH', color: '#4285F4', description: 'Aktivitäten von Android-Geräten laden' },
+  { id: 'suunto', name: 'Suunto App', short: 'SU', color: '#101820', description: 'GPS-Touren von Suunto-Uhren übernehmen' }
+];
+
+export const providerActivities: ImportableActivity[] = [
+  { id: 101, provider: 'strava', title: 'Salzburger Hochthron via Reitsteig', date: 'gestern, 07:14', elevation: 1370, distance: '11,2 km', duration: '04:56 h' },
+  { id: 102, provider: 'strava', title: 'Geiereck Morgenrunde', date: 'vor 4 Tagen', elevation: 1288, distance: '9,8 km', duration: '04:10 h' },
+  { id: 201, provider: 'garmin', title: 'Stöhrhaus über Mittagskogel', date: 'vor 2 Tagen', elevation: 1894, distance: '13,6 km', duration: '05:48 h' },
+  { id: 202, provider: 'garmin', title: 'Zeppezauerhaus Feierabendrunde', date: 'vor 6 Tagen', elevation: 1663, distance: '7,4 km', duration: '03:44 h' },
+  { id: 301, provider: 'apple-health', title: 'Wandern · Untersberg', date: 'vor 3 Tagen', elevation: 940, distance: '7,1 km', duration: '03:20 h' },
+  { id: 401, provider: 'google-health', title: 'Zeppezauerhaus Aufstieg', date: 'vor 5 Tagen', elevation: 1663, distance: '7,4 km', duration: '03:50 h' },
+  { id: 501, provider: 'suunto', title: 'Dopplersteig Tour', date: 'vor 1 Woche', elevation: 1805, distance: '9,8 km', duration: '04:32 h' }
+];
+
 export const leaderboard = [
   { rank: 1, name: 'MountainRunner_Grödig', initials: 'MG', hm: '18.420', tours: 26, badge: 'Dopplersteig-König' },
   { rank: 2, name: 'Lenz_Salzburg', initials: 'LS', hm: '14.860', tours: 19, badge: 'Wald-Retter' },

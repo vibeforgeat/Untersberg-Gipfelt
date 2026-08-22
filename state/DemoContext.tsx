@@ -1,5 +1,5 @@
 import { createContext, PropsWithChildren, useContext, useState } from 'react';
-import { posts as seedPosts, SummitPost } from '@/data/mockData';
+import { ImportableActivity, posts as seedPosts, ProviderId, SummitPost } from '@/data/mockData';
 
 type DemoContextValue = {
   hm: number;
@@ -8,8 +8,11 @@ type DemoContextValue = {
   importedTracks: number;
   repairedTrailMeters: number;
   posts: SummitPost[];
+  connections: Partial<Record<ProviderId, boolean>>;
+  importedActivityIds: number[];
   completeCheckin: (summit: string, elevation: number) => void;
-  importTrack: () => void;
+  toggleConnection: (provider: ProviderId) => boolean;
+  importActivity: (activity: ImportableActivity) => void;
   addPost: (text: string, summit?: string) => void;
   giveKudos: (id: number) => void;
   resetDemo: () => void;
@@ -23,6 +26,8 @@ export function DemoProvider({ children }: PropsWithChildren) {
   const [importedTracks, setImportedTracks] = useState(0);
   const [repairedTrailMeters, setRepairedTrailMeters] = useState(184);
   const [posts, setPosts] = useState(seedPosts);
+  const [connections, setConnections] = useState<Partial<Record<ProviderId, boolean>>>({});
+  const [importedActivityIds, setImportedActivityIds] = useState<number[]>([]);
   const trees = 42 + Math.floor((hm - 4250) / 100);
 
   const completeCheckin = (summit: string, elevation: number) => {
@@ -32,9 +37,17 @@ export function DemoProvider({ children }: PropsWithChildren) {
     setPosts(current => current.map(post => post.id === 1 ? { ...post, kudos: post.kudos + 1 } : post));
   };
 
-  const importTrack = () => {
+  const toggleConnection = (provider: ProviderId) => {
+    const next = !connections[provider];
+    setConnections(current => ({ ...current, [provider]: next }));
+    return next;
+  };
+
+  const importActivity = (activity: ImportableActivity) => {
+    if (importedActivityIds.includes(activity.id)) return;
+    setImportedActivityIds(current => [...current, activity.id]);
     setImportedTracks(current => current + 1);
-    setHm(current => current + 620);
+    setHm(current => current + activity.elevation);
   };
 
   const addPost = (text: string, summit = 'Salzburger Hochthron') => {
@@ -47,9 +60,9 @@ export function DemoProvider({ children }: PropsWithChildren) {
   };
 
   const giveKudos = (id: number) => setPosts(current => current.map(post => post.id === id ? { ...post, kudos: post.kudos + 1 } : post));
-  const resetDemo = () => { setHm(4250); setCheckins(0); setImportedTracks(0); setRepairedTrailMeters(184); setPosts(seedPosts); };
+  const resetDemo = () => { setHm(4250); setCheckins(0); setImportedTracks(0); setRepairedTrailMeters(184); setPosts(seedPosts); setConnections({}); setImportedActivityIds([]); };
 
-  return <DemoContext.Provider value={{ hm, trees, checkins, importedTracks, repairedTrailMeters, posts, completeCheckin, importTrack, addPost, giveKudos, resetDemo }}>{children}</DemoContext.Provider>;
+  return <DemoContext.Provider value={{ hm, trees, checkins, importedTracks, repairedTrailMeters, posts, connections, importedActivityIds, completeCheckin, toggleConnection, importActivity, addPost, giveKudos, resetDemo }}>{children}</DemoContext.Provider>;
 }
 
 export function useDemo() {
